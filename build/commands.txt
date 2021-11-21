@@ -1,0 +1,4 @@
+anchors calc- "darknet.exe detector calc_anchors data/obj.data -num_of_clusters 9 -width 416 -height 416"
+detect - set batch and subdivision = 1 in cfg
+        - "darknet.exe detector test data/obj.data cgf/yolov3-obj.cfg backup/yolov3.weights dog.jpg"
+training command- "darknet.exe detector train data/obj.data yolov3-obj.cfg darknet53.conv.74"
